@@ -7,7 +7,81 @@
 
 /* Body Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    background-image: url('../img/menu-wallpaper.jpg');
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+h1, h2, h3 {
+    color: #d27d5f; /* Vintage warm brown */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Nostalgic font choice */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Soft text shadow for 90s feel */
+}
+
+/* Navigation */
+header {
+    background-color: rgba(255,194,209, 0.6); /* Soft pastel pink background */
+    padding: 20px 0;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #d27d5f;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    font-size: 1.2rem;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #302f2f;
+    font-weight: 500;
+    text-transform: uppercase; /* Adds that 90s effect */
+}
+
+header nav ul li a:hover {
+    color: #d27d5f; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* Hamburger Menu Icon (hidden on large screens) */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* Hero Section */

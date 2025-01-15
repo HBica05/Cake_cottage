@@ -12,7 +12,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
     font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }
 
@@ -34,7 +33,7 @@ h1, h2, h3 {
 
 /* Navigation */
 header {
-    background-color: rgb(201, 198, 198, 0.6); /* Soft pastel pink background */
+    background-color: rgba(255,194,209, 0.4); /* Soft pastel pink background */
     padding: 20px 0;
 }
 
@@ -68,7 +67,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #4e4e4e;
+    color: #302f2f;
     font-weight: 500;
     text-transform: uppercase; /* Adds that 90s effect */
 }
