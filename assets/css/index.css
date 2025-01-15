@@ -68,6 +68,48 @@ header nav ul li a:hover {
     color: #d27d5f; /* Highlight color on hover */
 }
 
+/* Hamburger Menu Icon (hidden on large screens) */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile (Tablet and below) */
+@media (max-width: 768px) {
+    /* Hide navigation links by default on smaller screens */
+    #nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(243, 185, 176, 0.9); /* Make background slightly darker */
+        position: absolute;
+        top: 70px; /* Adjust the position of the dropdown */
+        left: 0;
+        padding: 20px 0;
+    }
+
+    /* Show hamburger icon on small screens */
+    .menu-icon {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-bottom: 15px;
+    }
+
+    /* Make links full width */
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 /* Hero Section */
 .hero {
     background: url('bakery-banner.jpg') no-repeat center center/cover;
@@ -135,7 +177,7 @@ header nav ul li a:hover {
 }
 
 .product img {
-    width: 300px;
+    width: 100%;
     height: 400px;
     object-fit: cover;  /* Ensure the image covers the area without distorting */
     border-radius: 8px; /*rounded corners for images */
@@ -234,5 +276,55 @@ footer p {
 
     .hero-content p {
         font-size: 1.1rem;
+    }
+    header h1 {
+        font-size: 1.8rem; /* Smaller font size for header on mobile */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .contact form {
+        width: 100%; /* Make contact form take full width */
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        height: 300px; /* Make hero section smaller on very small screens */
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .product img {
+        height: 200px; /* Adjust image size for mobile */
+    }
+
+    .product {
+        width: 90%; /* Full width on mobile for better spacing */
+    }
+
+    .about p {
+        font-size: 1rem; /* Smaller font for about us on mobile */
+    }
+
+    .contact input, .contact textarea {
+        font-size: 0.9rem; /* Smaller input font for mobile */
     }
 }

@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <title>The Little Cake Cottage</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    
 </head>
 <body>
 
@@ -17,7 +16,12 @@
         <div class="container">
             <h1>Little Cake Cottage</h1>
             <nav>
-                <ul>
+                <!-- Menu Icon (Hamburger) -->
+                <div class="menu-icon" id="menu-icon">
+                    <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+                </div>
+                <!-- Navigation Links -->
+                <ul id="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -68,7 +72,15 @@
     <section id="about" class="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>We’ve been baking delicious treats for over 10 years, using only the finest ingredients and time-honored techniques. From cakes to cookies, we pride ourselves on creating the most delicious baked goods.</p>
+            <p>From the moment I could hold a whisk, I have been enchanted by the art of baking.
+                For almost 8 years, I've been crafting sweet and savory delights, pouring my heart 
+                and soul into every recipe. What started as a childhood passion has blossomed into a
+                lifelong love affair with flavors and creativity.</p>
+            <p>At Little Cake Cottage, I believe in more than just baking—it's about creating magical 
+                experiences through every bite. Each cake, pastry, and loaf is made with the finest 
+                ingredients and a sprinkle of love, designed to bring joy and evoke memories. My goal 
+                is to share the magic of flavors, inspire smiles, and spread the love of baking with every 
+                customer that walks through our doors.</p>    
         </div>
     </section>
 
@@ -99,34 +111,29 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        // Get the menu icon and the navigation links container
+        const menuIcon = document.getElementById("menu-icon");
+        const navLinks = document.getElementById("nav-links");
 
+        // Toggle the display of the navigation links when the menu icon is clicked
+        menuIcon.addEventListener("click", () => {
+            if (navLinks.style.display === "block") {
+                navLinks.style.display = "none"; // Hide the nav links if they are visible
+            } else {
+                navLinks.style.display = "block"; // Show the nav links if they are hidden
+            }
+        });
 
-    <!-- <h1>Little Cake Cottage</h1>
+        // Optionally, close the menu when any of the navigation links are clicked
+        const navItems = document.querySelectorAll("#nav-links a");
+        navItems.forEach(item => {
+            item.addEventListener("click", () => {
+                navLinks.style.display = "none"; // Close the menu when a link is clicked
+            });
+        });
+    </script>
 
-    <div class="opaque-overlay">&nbsp;</div>
-        <div class="row">
-            <div class="col-12">
-                <h1>Handmade freshly baked treats and timeless recipes, made with love and the finest ingredients.</h1>
-
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mr-auto">
-                    <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="/about">Recipes</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cake Options</a>
-
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Vegan</a>
-                            <a class="dropdown-item" href="#">Gluten-free</a>
-                            <a class="dropdown-item" href="#">Sugar-free</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>    
-
-
-        </div>
-    </div>     -->
 </body>
 </html>
